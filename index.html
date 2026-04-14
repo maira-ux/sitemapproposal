@@ -350,6 +350,12 @@
                 color: var(--text);
             }
 
+            .flow-child-chip:has(.phase2-pill) {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+
             /* Deep pages — muted + indent */
             .flow-deep-chip {
                 display: block;
@@ -1037,18 +1043,7 @@
                             </div>
                         </div>
 
-                        <!-- 4. Resources -->
-                        <div class="flow-branch">
-                            <div class="flow-main-chip clickable-chip" onclick="goToDetail('detail-resources')">📚 Resources
-                            </div>
-                            <div class="flow-children">
-                                <div class="flow-child-chip clickable-chip" onclick="goToDetail('detail-blog')">Blog</div>
-                                <div class="flow-child-chip clickable-chip" onclick="goToDetail('detail-faqs')">FAQs <span
-                                        class="phase2-pill">Phase 2</span></div>
-                            </div>
-                        </div>
-
-                        <!-- 5. About -->
+                        <!-- 4. About -->
                         <div class="flow-branch">
                             <div class="flow-main-chip clickable-chip" onclick="goToDetail('detail-about-heading')">ℹ️ About
                                 us</div>
@@ -1058,6 +1053,18 @@
                                 </div>
                                 <div class="flow-child-chip clickable-chip" onclick="goToDetail('detail-values')">Our Values
                                 </div>
+                            </div>
+                        </div>
+
+                        <!-- 5. Resources (below About us) -->
+                        <div class="flow-branch">
+                            <div class="flow-main-chip clickable-chip" onclick="goToDetail('detail-resources')">📚 Resources
+                                <span class="phase2-pill">Phase 2</span></div>
+                            <div class="flow-children">
+                                <div class="flow-child-chip clickable-chip" onclick="goToDetail('detail-blog')">Blog <span
+                                        class="phase2-pill">Phase 2</span></div>
+                                <div class="flow-child-chip clickable-chip" onclick="goToDetail('detail-faqs')">FAQs <span
+                                        class="phase2-pill">Phase 2</span></div>
                             </div>
                         </div>
                     </div>
@@ -1090,8 +1097,6 @@
                                         <li><strong>Logo</strong> — Always.Bank brand logo (links to Home)</li>
                                         <li><strong>Banking</strong> — Main navigation menu</li>
                                         <li><strong>Loans</strong> — Main navigation menu</li>
-                                        <li><strong>Resources</strong> — Main navigation menu (Blog, FAQs)</li>
-                                        <li><strong>About</strong> — Main navigation menu (company)</li>
                                     </ul>
                                     <div class="content-section-title" style="margin-top:14px;">🎯 CTAs</div>
                                     <div class="cta-list">
@@ -1174,22 +1179,22 @@
                                         <li style="font-size:.82rem;color:var(--muted);">• Instagram</li>
                                     </ul>
                                 </div>
-                                <!-- 6. Resources + About — Phase 2 gray (last) -->
+                                <!-- 6. About + Resources — Phase 2 gray (last); About above Resources -->
                                 <div style="display:flex;flex-direction:column;gap:28px;">
-                                    <div>
-                                        <h4 class="footer-col-title">📚 Resources</h4>
-                                        <ul
-                                            style="list-style:none;display:flex;flex-direction:column;gap:6px;margin:0;padding:0;">
-                                            <li style="font-size:.82rem;color:var(--muted);">• Blog</li>
-                                            <li style="font-size:.82rem;color:var(--muted);">• FAQs</li>
-                                        </ul>
-                                    </div>
                                     <div>
                                         <h4 class="footer-col-title">ℹ️ About us </h4>
                                         <ul
                                             style="list-style:none;display:flex;flex-direction:column;gap:6px;margin:0;padding:0;">
                                             <li style="font-size:.82rem;color:var(--muted);">• Meet The Team</li>
                                             <li style="font-size:.82rem;color:var(--muted);">• OurValues</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <h4 class="footer-col-title">📚 Resources</h4>
+                                        <ul
+                                            style="list-style:none;display:flex;flex-direction:column;gap:6px;margin:0;padding:0;">
+                                            <li style="font-size:.82rem;color:var(--muted);">• Blog</li>
+                                            <li style="font-size:.82rem;color:var(--muted);">• FAQs</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -1231,7 +1236,7 @@
                                 <tr>
                                     <td><strong>Login</strong></td>
                                     <td>Header (all pages)</td>
-                                    <td>Log in to your account - linker</td>
+                                    <td>Log in to your account - linker<br>SBA login<br>Online Banking<br>Factoring/ABL</td>
                                 </tr>
                                 <tr>
                                     <td><strong>Accept / Decline Cookies</strong></td>
@@ -2127,8 +2132,8 @@
                         </div>
                     </div>
 
-                    <div class="content-mapping-subheading" id="detail-resources">
-                        Resources</div>
+                    <div class="content-mapping-subheading content-mapping-subheading--phase2" id="detail-resources">
+                        Resources <span class="phase2-pill">Phase 2</span></div>
 
                     <!-- BLOG -->
                     <div class="content-card" id="detail-blog">
@@ -2138,6 +2143,7 @@
                                 <div>
                                     <div class="page-title-group">
                                         <div class="page-title">Blog</div>
+                                        <span class="phase2-pill">Phase 2</span>
                                     </div>
                                     <span class="page-url-link">/learn/resources/blog/</span>
                                 </div>
